@@ -6,6 +6,273 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 960px;
-    width: 100%;
+    display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  	overflow-x: hidden;
+  	font-size: 18px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; 
+}
+
+header .container, header .container > * {
+	max-width: 950px;
+	display: flex;
+	flex-direction: row;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	background-color: white;
+	max-height: 90px;
+}
+header .container h1{
+	margin-top: 33px;
+	font-size: 18px;
+	white-space: nowrap;
+}
+header .container ul {
+	margin-left: 250px;
+  	display: flex;
+	list-style-type: none;
+}
+
+header .container li {
+ 	padding: 16px;
+}
+header .container a {
+
+	font-size: 18px;
+	color: #6b7280;
+	text-decoration: none;
+}
+header .container a:hover {
+	color: #5A67D8;
+	text-decoration: none;
+}
+.overview-hero {
+  	background-color: #E2E8F0;
+}
+.overview-hero .container, .overview-hero .container > *{
+	max-width: 770px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	grid-column: 2 / 3;
+  	grid-row: 2 / 3;
+}
+img[src="meditate.svg"]{
+	height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 150px;
+}
+.overview-hero-text h2 {
+	margin-left: 200px;
+	text-align: left;
+}
+.overview-hero-text p {
+	margin-left: 200px;
+	text-align: left;
+}
+.learn-about .container, .learn-about .container > * {
+	grid-column: 2 / 3;
+  	grid-row: 3 / 4;
+  	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  	max-width: 950px;
+
+}
+.learn-about .container h2{
+	font-size: 24px;
+	color:#48BB78;
+
+}
+.cards {
+	margin-top: 75px;
+}
+.card {
+	grid-column: 1;
+  	grid-row: 1;
+	border-radius: 5px;
+	border: 1px solid #E2E8F0;
+    box-shadow: 2px 2px 2px 0px  rgba(0,0,0,0.3);
+    padding: 10px;
+    margin-left: 15px;
+}
+.card:nth-child(1) {
+	grid-column: 1;
+  	grid-row: 1;
+}
+.card:nth-child(2) {
+	grid-column: 2;
+  	grid-row: 1;
+}
+.card:nth-child(3) {
+	grid-column: 3;
+  	grid-row: 1;
+}
+.card-body h3 {
+	font-size: 21px;
+	color: #48BB78;
+}
+img[src="fitness.svg"]{
+	height: 200px;
+	width:200px;
+}
+img[src="lifestyle.svg"]{
+
+	height: 200px;
+	width:200px;
+}
+img[src="AI.svg"]{
+	height: 200px;
+	width:200px;
+
+}
+.testing {
+	background-color: #4A5568;
+	color: white;
+}
+.testing .container, .testing .container > *{
+	grid-column: 2 / 3;
+  	grid-row: 4 / 5;
+  	max-width: 930px;
+  	margin-top:50px;
+  	margin-bottom:50px;
+
+ }
+
+
+.testing .container .testing-description p{
+  	max-width: 600px;
+}
+
+.cta .btn {
+	color: white;
+	background-color: #48BB78;
+	position: relative;
+	border: 1px;
+	padding: 10px;
+	top:75px;
+	left: 800px;
+ 	text-decoration: none;
+ 	border-radius: 5px;
+}
+.stories .container, .stories .container > *{
+	grid-column: 2 / 3;
+  	grid-row: 5 / 6;
+  	max-width: 930px;
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+}
+.stories .container h2 {
+	color:#5A67D8;
+}
+article {
+	justify-content: space-around;
+    display: flex;
+}
+.stories .container article:first-of-type{
+	margin-top: 50px;
+
+}
+.stories .container article:last-of-type{
+	margin-top: 280px;
+
+}
+
+article .article-body h3 {
+	max-width: 500px;
+	font-size: 18px;
+}
+.stories .container article p a{
+	color:#5A67D8;
+	text-decoration: none;
+
+}
+img[src="Turk.jpg"]{
+	
+	float: left;
+	border-radius: 50%;
+    height: 150px; 
+    width: 150px;
+    margin-right: 30px;
+    position: relative;
+    top:25px;
+
+    
+}
+img[src="tests.jpg"]{
+	float: left;
+	border-radius: 50%;
+    height: 150px; 
+    width: 150px; 
+    margin-right: 30px;
+    position: relative;
+    top:25px;
+
+}
+.newsletter {
+	background-color: #48BB78;
+
+}
+.newsletter .container, .newsletter .container > *{
+	color: white;
+	grid-column: 2/ 3;
+  	grid-row: 6 / 7;
+  	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  	max-width: 1000px;
+  	padding-bottom: 20px;
+  	
+  	
+}
+.newsletter .container .message{
+	color: white;
+	position: relative;
+	right:300px;
+	top:20px;
+}
+.newsletter .container h3{
+	text-align: right;
+	grid-row: 1;
+	grid-column: 1;
+}
+.newsletter .container p{
+	position: relative;
+	left:180px;
+	grid-row: 2;
+	grid-column: 1;
+}
+.form-group #email {
+	grid-row: 2;
+	grid-column: 1;
+	height:30px;
+	width: 300px;
+	border: none;
+	border-radius: 3px;
+	position: relative;
+	right:320px;
+	top:-20px;
+}
+.btn {
+	color: white;
+	border: none;
+	border-radius: 3px;
+	background-color: #5A67D8;
+	position: relative;
+	right:250px;
+	top:-20px;
+	margin-top: -33px;
+	height:35px;
+	width: 150px;
+	grid-row: 3;
+	grid-column: 2;
+}
+
+footer .container {
+	grid-column: 2/3;
+  	grid-row: 7 / 8;
+  	background-color: #4A5568;
+	color: white;
+}
+footer .container p {
+	position: relative;
+	left:200px;
 }
